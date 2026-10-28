@@ -1,0 +1,193 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #555;
+  background: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 245px;
+  padding: 20px 15px;
+  background: #f7f7f7;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  margin: 5px 0 35px;
+  padding-left: 8px;
+  font-size: 21px;
+  font-weight: normal;
+}
+
+.menu-title {
+  padding-left: 10px;
+  color: #888;
+  font-size: 12px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.menu-list li {
+  padding: 13px 10px;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.menu-list li.active {
+  color: #e96932;
+  background: #fff0e7;
+}
+
+.user {
+  margin-top: auto;
+  padding: 15px 5px;
+  border-top: 1px solid #ddd;
+}
+
+.user p {
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.user small {
+  color: #888;
+  font-size: 11px;
+}
+
+.logout {
+  padding: 12px 5px;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 0 35px;
+}
+
+.header {
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 13px;
+  color: #777;
+}
+
+.welcome {
+  margin: 40px 0;
+}
+
+.welcome h1 {
+  margin: 0 0 15px;
+  font-size: 34px;
+  font-weight: normal;
+  color: #555;
+}
+
+.welcome p {
+  font-size: 14px;
+  color: #777;
+}
+
+.section-title {
+  margin: 25px 0 15px;
+  font-size: 24px;
+  font-weight: normal;
+  color: #555;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  padding-bottom: 25px;
+}
+
+.card {
+  min-height: 125px;
+  padding: 18px;
+  border: 1px solid #ff7b38;
+  border-radius: 6px;
+  background: white;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 17px;
+  font-weight: normal;
+  color: #555;
+}
+
+.card p {
+  color: #777;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.card:last-child {
+  grid-column: 1 / -1;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 15px 0;
+  border-top: 1px solid #ddd;
+  color: #888;
+  font-size: 12px;
+}
+
+@media (max-width: 750px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .menu-list li {
+    padding: 8px;
+  }
+
+  .user {
+    margin-top: 15px;
+  }
+
+  .main {
+    padding: 0 18px;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card:last-child {
+    grid-column: auto;
+  }
+
+  .welcome h1 {
+    font-size: 28px;
+  }
+}
